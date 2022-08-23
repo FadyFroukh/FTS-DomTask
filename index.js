@@ -5,12 +5,23 @@ let addForm = document.getElementById("add-form"),
     alertMsg = document.querySelector("#alert-msg"),
     alertBtn = document.querySelector("#alert-btn")
 
+let searchForm = document.getElementById("search-form"),
+    searchIcon = document.querySelector("#search-div svg");
+
 function showAlertDialog(msg){
     alertDialog.classList.add("show-item");
     alertMsg.textContent = msg;
     alertBtn.addEventListener("click",()=>{
         alertDialog.classList.remove("show-item");
     });
+};
+
+function searchTasks(){
+    let searchVal = searchForm.search.value.trim();
+
+    let tasks = JSON.parse(localStorage.getItem("tasks")),
+        newTasks = tasks.filter(task=> task.task.includes(searchVal)),
+        newAssignees= tasks.filter(task=> task.assignee.includes(searchVal));
 };
 
 addForm.addEventListener("submit",function(e){
@@ -36,4 +47,11 @@ addForm.addEventListener("submit",function(e){
     addForm.assignee.value = "";
     addForm.task.focus();
     showAlertDialog("Added Item Successfully");
+});
+
+searchIcon.addEventListener("click",()=> searchTasks());
+
+searchForm.addEventListener("submit",function(e){
+    e.preventDefault();
+    searchTasks();
 });
