@@ -48,12 +48,21 @@
             <!-- To Be Embedded Using JS -->
         </section>
     </main>
-    <div id="alert-dialog" class="alert-dialog flex-col flex-item-center">
+    <div id="alert-dialog" class="dialog flex-col flex-item-center">
         <header class="alert-dialog-header">
             <h2 id="alert-msg"></h2>
         </header>
         <div>
             <button id="alert-btn" class="btn">All Set</button>
+        </div>
+    </div>
+    <div id="confirm-dialog" class="dialog flex-col flex-item-center">
+        <header>
+            <p>Are You Sure You Want to Delete <span id="confirm-task">Task Here</span>?</p>
+        </header>
+        <div id="confirm-btns" class="confirm-btns">
+            <button id="cancel-btn" class="btn" style="background:var(--red)">Cancel</button>
+            <button id="confirm-btn" class="btn">Delete</button>
         </div>
     </div>
 </body>
