@@ -79,7 +79,41 @@ body{
     cursor: pointer;
     width: 20px !important;
 }
+/* Tasks Section Settings */
+.tasks-section{
+    width: 400px;
+    height: 300px;
+    overflow: auto;
+}
+.tasks-section .task-body{
+    margin-bottom: 25px;
+    flex-direction: column;
+}
+.tasks-section .task-name{
+    margin-bottom: 18px;
+    width: 100%;
+}
+.tasks-section .task-assignee{
+    width: 100%;
+}
+.tasks-section .task-date{
+    color: #aaa;
+}
+.delete-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--red);
+    cursor: pointer;
+}
+.done-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--border-bottom);
+    cursor: pointer;
 
+}
 
 /* Framework Settings */
 
@@ -106,6 +140,10 @@ body{
 .show-item{
     display: flex !important;
 }
+.task-done{
+    text-decoration: line-through;
+}
+
 .mrgn-btm-30{
     margin-bottom: 30px;
 }
