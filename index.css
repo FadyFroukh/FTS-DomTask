@@ -110,7 +110,12 @@ body{
 .confirm-btns{
     margin-top: 20px;
 }
+/* Footer Settings */
 
+footer{
+    margin-top: 30px;
+    width: 400px;
+}
 
 /* Framework Settings */
 

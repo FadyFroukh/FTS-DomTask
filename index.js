@@ -51,11 +51,28 @@ function showConfirmDialog(callback){
         callback(false);
     });
 };
+function countTasks(){
+    let tasks = JSON.parse(localStorage.getItem("tasks"));
+
+    if (tasks){
+        let todoTasksCount = 0,
+        doneTasksCount = 0;
+
+        tasks.filter(task=>task.status === 0 ? todoTasksCount++ : doneTasksCount++);
+        document.querySelector("#todo").textContent = `Todo : ${todoTasksCount}`;
+        document.querySelector("#done").textContent = `Done : ${doneTasksCount}`;
+    }else{
+        document.querySelector("#todo").textContent = `Todo : 0`;
+        document.querySelector("#done").textContent = `Done : 0`;
+    }
+}
+
+countTasks();
 
 function searchTasks(){
     let searchVal = searchForm.search.value.trim();
 
-    if (!searchVal === ""){
+    if (searchVal !== ""){
     let tasks = JSON.parse(localStorage.getItem("tasks")),
         newTasks = tasks.filter(task=> task.task.includes(searchVal)),
         newAssignees= tasks.filter(task=> task.assignee.includes(searchVal));
@@ -127,6 +144,7 @@ function mapTasks(tasks){
                             emptyTasks();
                             localStorage.setItem("tasks",null);
                         }
+                        countTasks();
                     }
                 });
             });
@@ -143,6 +161,7 @@ function mapTasks(tasks){
                     });
                     tasksSection.innerHTML = "";
                     localStorage.setItem("tasks",JSON.stringify(newTasks));
+                    countTasks();
                     mapTasks(JSON.parse(localStorage.getItem("tasks")));
                 }
             });
@@ -189,6 +208,7 @@ addForm.addEventListener("submit",function(e){
     mapTasks(JSON.parse(localStorage.getItem("tasks")));
     addForm.task.value = "";
     addForm.assignee.value = "";
+    countTasks();
 });
 
 searchIcon.addEventListener("click",()=> searchTasks());
