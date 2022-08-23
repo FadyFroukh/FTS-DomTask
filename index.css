@@ -1,6 +1,7 @@
 /* General Settings */
 :root{
     --border-bottom:#2f3640;
+    --red:#EA2027;
 }
 *{
     padding: 0;
@@ -143,7 +144,9 @@ body{
 .task-done{
     text-decoration: line-through;
 }
-
+.text-center{
+    text-align: center;
+}
 .mrgn-btm-30{
     margin-bottom: 30px;
 }
