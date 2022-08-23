@@ -51,6 +51,20 @@ body{
 .add-task-form{
     border-bottom: 5px solid #2d3436;
 }
+/* Alert Dialog Settings */
+.alert-dialog{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: rgba(38, 36, 36, 0.85);
+    color: #fff;
+    display: none !important;
+}
+
+.alert-dialog .alert-dialog-header{
+    margin-bottom: 20px;
+}
 
 /* Framework Settings */
 
@@ -69,7 +83,9 @@ body{
 .form-div{
     display: flex;
 }
-
+.show-item{
+    display: flex !important;
+}
 .mrgn-btm-30{
     margin-bottom: 30px;
 }
