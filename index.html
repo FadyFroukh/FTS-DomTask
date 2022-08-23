@@ -12,8 +12,24 @@
     <title>FTS-DomTask</title>
 </head>
 <body>
-    <main>
-        
+    <main class="main-section flex-col flex-item-center">
+        <form class="add-task-form mrgn-btm-30" id="add-form" method="POST">
+            <section class="form-section">
+                <div class="form-div flex-col">
+                    <label class="mrgn-btm-15" for="task">Task</label>
+                    <input name="task" type="text" placeholder="Enter Task Name" maxlength="25"/>
+                </div>
+            </section>
+            <section class="form-section">
+                <div class="form-div flex-col">
+                    <label class="mrgn-btm-15" for="assignee">Assignee</label>
+                    <input name="assignee" type="text" placeholder="Enter Task Assignee" maxlength="25"/>
+                </div>
+                <div class="form-div flex-item-center">
+                    <button type="submit" class="btn">Add Task</button>
+                </div>
+            </section>
+        </form>
     </main>
 </body>
 </html>

@@ -1,5 +1,105 @@
+/* General Settings */
+:root{
+    --border-bottom:#2f3640;
+}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main Settings */
+.main-section{
+    min-height: 100vh;
+}
+
+/* Add Form Settings */
+.add-task-form{
+    border-bottom: 5px solid #2d3436;
+}
+/* General Settings */
+:root{
+    --border-bottom:#2f3640;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main Settings */
+.main-section{
+    min-height: 100vh;
+}
+
+/* Add Form Settings */
+.add-task-form{
+    border-bottom: 5px solid #2d3436;
+}
+
+/* Framework Settings */
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.flex-item-center{
+    justify-content: center;
+    align-items: center;
+}
+.form-section{
+    display: flex;
+    margin-bottom: 20px;
+}
+.form-div{
+    display: flex;
+}
+
+.mrgn-btm-30{
+    margin-bottom: 30px;
+}
+.mrgn-btm-15{
+    margin-bottom: 15px;
+}
+
+input:not([type='submit']){
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid var(--border-bottom);
+    transition: all .1s ease-in-out;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 3px solid var(--border-bottom);
+}
+
+.btn{
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    border-radius: 7px;
+    background-color: #1289A7;
+    transition: all .4s ease-in-out;
+}
+.btn:hover{
+    background-color: var(--border-bottom);
+    color: #fff;
 }
