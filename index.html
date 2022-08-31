@@ -30,6 +30,31 @@
                 </div>
             </section>
         </form>
+        <form class="search-form" id="search-form" method="POST">
+            <section class="form-section">
+                <div class="form-div">
+                    <input type="text" name="search" placeholder="Search Using Task or Assignee">
+                </div>
+            </section>
+            <section class="form-section">
+                <div class="form-div search-div" id="search-div">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </div>
+            </section>
+        </form>
+        <section id="tasks-section" class="tasks-section flex-col">
+            <!-- To Be Embedded Using JS -->
+        </section>
     </main>
+    <div id="alert-dialog" class="alert-dialog flex-col flex-item-center">
+        <header class="alert-dialog-header">
+            <h2 id="alert-msg"></h2>
+        </header>
+        <div>
+            <button id="alert-btn" class="btn">All Set</button>
+        </div>
+    </div>
 </body>
 </html>
