@@ -65,6 +65,21 @@ body{
 .alert-dialog .alert-dialog-header{
     margin-bottom: 20px;
 }
+/* Search Form Settings */
+.search-form{
+    width: 400px;
+    position: relative;
+    margin-bottom: 30px;
+}
+.search-form .search-div{
+    position: absolute;
+    top: 0;
+    left: 95%;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 20px !important;
+}
+
 
 /* Framework Settings */
 
@@ -76,12 +91,17 @@ body{
     justify-content: center;
     align-items: center;
 }
+.flex-btw {
+    display: flex;
+    justify-content: space-between;
+}
 .form-section{
     display: flex;
     margin-bottom: 20px;
 }
 .form-div{
     display: flex;
+    width: 100%;
 }
 .show-item{
     display: flex !important;
@@ -98,6 +118,7 @@ input:not([type='submit']){
     border: none;
     border-bottom: 1px solid var(--border-bottom);
     transition: all .1s ease-in-out;
+    width: 100%;
 }
 
 input:focus{
