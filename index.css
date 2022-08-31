@@ -1,6 +1,7 @@
 /* General Settings */
 :root{
     --border-bottom:#2f3640;
+    --red:#EA2027;
 }
 *{
     padding: 0;
@@ -51,6 +52,70 @@ body{
 .add-task-form{
     border-bottom: 5px solid #2d3436;
 }
+/* Alert Dialog Settings */
+
+.alert-dialog-header{
+    margin-bottom: 20px;
+}
+/* Search Form Settings */
+.search-form{
+    width: 400px;
+    position: relative;
+    margin-bottom: 30px;
+}
+.search-form .search-div{
+    position: absolute;
+    top: 0;
+    left: 95%;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 20px !important;
+}
+/* Tasks Section Settings */
+.tasks-section{
+    width: 400px;
+    height: 300px;
+    overflow: auto;
+}
+.tasks-section .task-body{
+    margin-bottom: 25px;
+    flex-direction: column;
+}
+.tasks-section .task-name{
+    margin-bottom: 18px;
+    width: 100%;
+}
+.tasks-section .task-assignee{
+    width: 100%;
+}
+.tasks-section .task-date{
+    color: #aaa;
+}
+.delete-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--red);
+    cursor: pointer;
+}
+.done-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--border-bottom);
+    cursor: pointer;
+
+}
+/* Confirm Dialog Settings */
+.confirm-btns{
+    margin-top: 20px;
+}
+/* Footer Settings */
+
+footer{
+    margin-top: 30px;
+    width: 400px;
+}
 
 /* Framework Settings */
 
@@ -62,14 +127,36 @@ body{
     justify-content: center;
     align-items: center;
 }
+.flex-btw {
+    display: flex;
+    justify-content: space-between;
+}
 .form-section{
     display: flex;
     margin-bottom: 20px;
 }
 .form-div{
     display: flex;
+    width: 100%;
 }
-
+.show-item{
+    display: flex !important;
+}
+.task-done{
+    text-decoration: line-through;
+}
+.text-center{
+    text-align: center;
+}
+.dialog{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: rgba(38, 36, 36, 0.85);
+    color: #fff;
+    display: none;
+}
 .mrgn-btm-30{
     margin-bottom: 30px;
 }
@@ -82,6 +169,7 @@ input:not([type='submit']){
     border: none;
     border-bottom: 1px solid var(--border-bottom);
     transition: all .1s ease-in-out;
+    width: 100%;
 }
 
 input:focus{
