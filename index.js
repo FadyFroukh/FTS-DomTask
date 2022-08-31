@@ -1,6 +1,17 @@
 "use-strict";
 
-let addForm = document.getElementById("add-form");
+let addForm = document.getElementById("add-form"),
+    alertDialog = document.querySelector("#alert-dialog"),
+    alertMsg = document.querySelector("#alert-msg"),
+    alertBtn = document.querySelector("#alert-btn")
+
+function showAlertDialog(msg){
+    alertDialog.classList.add("show-item");
+    alertMsg.textContent = msg;
+    alertBtn.addEventListener("click",()=>{
+        alertDialog.classList.remove("show-item");
+    });
+};
 
 addForm.addEventListener("submit",function(e){
     e.preventDefault();
@@ -9,9 +20,8 @@ addForm.addEventListener("submit",function(e){
         assignee = addForm.assignee.value.trim();
 
     if (task === "" || assignee === ""){
-        alert("Empty Fields");
+        showAlertDialog("Empty Fields");
         return;
-        //Alert Dialog Comes here instead of alert
     }
     const newTask = {
         task:task,
@@ -25,5 +35,5 @@ addForm.addEventListener("submit",function(e){
     addForm.task.value = "";
     addForm.assignee.value = "";
     addForm.task.focus();
-
+    showAlertDialog("Added Item Successfully");
 });
